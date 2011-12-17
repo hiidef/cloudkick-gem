@@ -37,7 +37,7 @@ module Cloudkick
     end
 
     def access_token
-      @@access_token ||= OAuth::AccessToken.new(consumer)
+      @@access_token ||= OAuth::AccessToken.new(consumer, @@key, @@secret)
     end
 
     def get(type, query=nil)
